@@ -44,7 +44,7 @@ def gallery(path):
     #dirs = filter(os.path.isdir, glob.glob(os.path.join(path, "*")))
     #images = filter(lambda filenames: filenames.split(".")[-1] in exts, glob.glob(os.path.join(path, "*")))
     dirs = next(os.walk(os.path.join(".", path)))[1]
-    images = filter(lambda filenames: filenames.split(".")[-1] in exts, next(os.walk(os.path.join(".", path)))[2])
+    images = filter(lambda filenames: filenames.split(".")[-1].lower() in exts, next(os.walk(os.path.join(".", path)))[2])
     
     html = '\
     <!DOCTYPE html>\
