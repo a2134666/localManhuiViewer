@@ -1,0 +1,5 @@
+image_crawler arguments:
+resource: csv file format, ex: Azami《蒂法》,37250,20
+site: 0:asiansister
+      1:xiannvtu
+      2:tujigu

@@ -120,7 +120,7 @@ if __name__ == "__main__":
         exit()
     #print(download.__name__)
     
-    with open(args.resource, "r") as f:
+    with open(args.resource, "r", encoding="utf-8") as f:
       print("Start to read album entries......")
       lines = f.readlines()
       for i,line in enumerate(lines):

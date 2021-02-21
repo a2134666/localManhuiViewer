@@ -40,12 +40,18 @@ def gallery(path):
     if len(ext) > 1:
         abort(404)'''
         
+    # for sorting filename in integer type, if there are more than one ".", get first segment
+    def filename_extract(filename):
+        temp = filename.split(".")[0]
+        return int(temp) if temp.isdigit() else temp
+        
     # get all path
     #dirs = filter(os.path.isdir, glob.glob(os.path.join(path, "*")))
     #images = filter(lambda filenames: filenames.split(".")[-1] in exts, glob.glob(os.path.join(path, "*")))
     dirs = next(os.walk(os.path.join(".", path)))[1]
-    images = filter(lambda filenames: filenames.split(".")[-1].lower() in exts, next(os.walk(os.path.join(".", path)))[2])
+    images = sorted(filter(lambda filenames: filenames.split(".")[-1].lower() in exts, next(os.walk(os.path.join(".", path)))[2] ), key = filename_extract)
     
+    # write html
     html = '\
     <!DOCTYPE html>\
     <html>\
