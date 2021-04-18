@@ -88,7 +88,7 @@ def gallery(path):
           <div class="w3-col m10">'
     for i in images:
         imgPath = "/{}/{}".format(path, i) if path else "/{}".format(i)
-        html += "<img class=\"w3-image\" src='{}'>".format(imgPath)
+        html += "<img class=\"w3-image\" src='{}' style='max-height: 1080px'>".format(imgPath)
         
     html += '\
           </div>\

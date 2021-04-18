@@ -32,7 +32,7 @@ def download_asiansister(code, length, title):
             opener.urlretrieve(os.path.join(host,line_array[3]), filename)
             print(filename, time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
           
-    random_sleep = random.randint(0,2)
+    random_sleep = random.random() * 2
     time.sleep(random_sleep)
   
 def download_xiannvtu(code, length, title):
@@ -48,7 +48,7 @@ def download_xiannvtu(code, length, title):
     opener.urlretrieve(url, filename)
     print(filename, time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
           
-    random_sleep = random.randint(0,2)
+    random_sleep = random.random() * 2
     time.sleep(random_sleep)
   
 def download_tujigu(code, length, title):
@@ -64,7 +64,7 @@ def download_tujigu(code, length, title):
     opener.urlretrieve(url, filename)
     print(filename, time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
           
-    random_sleep = random.randint(0,2)
+    random_sleep = random.random() * 2
     time.sleep(random_sleep)
       
   
